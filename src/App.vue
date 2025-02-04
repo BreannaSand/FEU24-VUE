@@ -1,18 +1,15 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
  <nav>
   <ul>
     <li>
-      <RouterLink to="/">Hem</RouterLink>
+      <RouterLink to="/MoviesList">Movies List</RouterLink>
     </li>
     <li>
-      <RouterLink to="/about">Om</RouterLink>
-    </li>
-    <li>
-      <RouterLink to="/about/richard">Om Richard</RouterLink>
+      <RouterLink to="/MovieDetails">Movie Details</RouterLink>
     </li>
 
 

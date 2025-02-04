@@ -1,24 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import AboutView from './views/AboutView.vue'
-import HomeView from './views/HomeView.vue'
-import HelloWorld from '../src/components/HelloWorld.vue'
+import MoviesList from './views/MoviesList.vue'
+import MovieDetails from './views/MovieDetails.vue'
+import MovieCard from './components/MovieCard.vue'
 
 
 export default createRouter({
   history: createWebHistory(),
   routes: [
     {
-      component: AboutView,
-      path: '/about/:'
+      component: MoviesList,
+      path: '/MoviesList'
     },
     {
-        component: HomeView,
-        path: '/'
-      },
-      {
-        component: HelloWorld,
-        path: '/hej'
-      }
+      component: MovieDetails,
+      path: '/MovieDetails'
+    },
+    {
+      component: MovieCard,
+      path: '/MovieCard'
+    }
   ]
 })

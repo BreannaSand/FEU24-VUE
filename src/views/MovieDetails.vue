@@ -1,8 +1,9 @@
 <template>
     <div>
-        <h1>Detta är about sidan</h1>
+        <h1>Movie Details
+        </h1>
     </div>
-    
+
 </template>
 
 <script setup>
