@@ -1,6 +1,8 @@
 
 <script setup>
 import MovieCard from '../components/MovieCard.vue'
+import fetchData from '../services/api.js'
+fetchData()
 </script>
 
 
