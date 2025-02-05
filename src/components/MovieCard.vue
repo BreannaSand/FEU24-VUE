@@ -12,7 +12,7 @@ defineProps({
     :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
     :alt="movie.title"
     />
-    <div class=""movie-title>
+    <div class="movie-title">
       {{ movie.title }}
     </div>
   </div>

@@ -18,7 +18,7 @@ onMounted(async () =>{
 
 
 <template>
-    <div class=""movies-list>
+    <div class="movies-list">
         <MovieCard
         v-for="movie in movies"
         :key="movie.id"
@@ -29,6 +29,13 @@ onMounted(async () =>{
 </template>
 
 
-<style>
-
+<style >
+    .movies-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+}
 </style>
