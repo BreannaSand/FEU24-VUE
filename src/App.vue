@@ -3,18 +3,6 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
- <nav>
-  <ul>
-    <li>
-      <RouterLink to="/MoviesList">Movies List</RouterLink>
-    </li>
-    <li>
-      <RouterLink to="/MovieDetails">Movie Details</RouterLink>
-    </li>
-
-
-  </ul>
-</nav>
 <main>
   <RouterView />
 </main>

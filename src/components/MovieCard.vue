@@ -1,24 +1,25 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
 defineProps({
   movie: Object
 })
 </script>
 
 <template>
-
   <div class="movie-card">
     <img
     v-if="movie.poster_path"
     :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
     :alt="movie.title"
     />
-    <div class="movie-title">
+    <RouterLink :to="`/movie/${movie.id}`" class="movie-title">
       {{ movie.title }}
-    </div>
+    </RouterLink>
   </div>
 </template>
 
-<style scoped>
+<style>
 .movie-card {
   width: 200px;
   border-radius: 10px;
@@ -38,6 +39,10 @@ defineProps({
   padding: 10px;
   font-size: 1rem;
   font-weight: bold;
+}
+
+.movie-title:hover {
+  text-decoration: underline;
 }
 
 </style>
