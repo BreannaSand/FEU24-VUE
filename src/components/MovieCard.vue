@@ -1,19 +1,26 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 
+const showClicked = () => {
+  console.log("You clicked on a film!")
+}
+
 defineProps({
   movie: Object
 })
 </script>
 
 <template>
-  <div class="movie-card">
+  <div class="movie-card" @click="showClicked">
     <img
     v-if="movie.poster_path"
     :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
     :alt="movie.title"
     />
-    <RouterLink :to="`/movie/${movie.id}`" class="movie-title">
+    <RouterLink
+    :to="`/movie/${movie.id}`"
+    class="movie-title"
+    >
       {{ movie.title }}
     </RouterLink>
   </div>

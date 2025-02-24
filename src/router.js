@@ -13,6 +13,10 @@ export default createRouter({
       path: '/MoviesList'
     },
     {
+      path: '/',
+      redirect: '/MoviesList'
+    },
+    {
       component: MovieDetails,
       path: '/movie/:id',
       props: true
